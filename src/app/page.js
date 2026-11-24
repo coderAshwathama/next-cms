@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Pencil } from "lucide-react";
+import { Icons } from "@/components/ui/icons";
+import { Layers, Pencil, Zap } from "lucide-react";
 
 export default function Landing() {
   return (
@@ -23,17 +24,34 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <section className="min-h-screen  sm:min-h-[80vh] w-full bg-gray-600/10">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
-          <span className="">
-            <Pencil size={50} />
-            <h3>Intuitive Editor</h3>
-            <p> Create and edit content with user friendly interface</p>
+      <section className="min-h-screen  sm:min-h-[50vh]  bg-gray-600/10 flex justify-center items-center w-full h-inherit px-4">
+        <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 ">
+          <span className="flex flex-col items-center gap-2 ">
+            {/* <Pencil size={50} /> */}
+            <Icons.BlogCustomIcon className="w-12 h-12 text-white" />
+            <h3 className="text-xl font-bold text-gray-100 ">
+              Intuitive Editor
+            </h3>
+            <p className="text-gray-400 text-center ">
+              {" "}
+              Create and edit content with user friendly interface
+            </p>
           </span>
-          <span className="">
-            <Pencil size={50} />
-            <h3>Intuitive Editor</h3>
-            <p> Create and edit content with user friendly interface</p>
+          <span className="flex flex-col items-center gap-2 ">
+            <Layers size={50} />
+            <h3 className="text-xl font-bold text-gray-100 ">Flexible Tools</h3>
+            <p className="text-gray-400 text-center ">
+              {" "}
+              Create and edit content with user friendly interface
+            </p>
+          </span>
+          <span className="flex flex-col items-center gap-2">
+            <Zap size={50} />
+            <h3 className="text-xl font-bold text-gray-100 ">Blazing Fast</h3>
+            <p className="text-gray-400 text-center ">
+              {" "}
+              Create and edit content with user friendly interface
+            </p>
           </span>
         </div>
       </section>
