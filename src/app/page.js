@@ -1,7 +1,14 @@
-export default function Home() {
+export default function Landing() {
   return (
-    <div className="p-6">
-      <h1>Landing Page</h1>
-    </div>
+    <main>
+      <section>
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+          Manage your Content With Ease
+        </h1>
+      </section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
   );
 }
