@@ -55,8 +55,26 @@ export default function Landing() {
           </span>
         </div>
       </section>
-      <section></section>
-      <section></section>
+      <section className="h-[60vh] sm:h-[50vh] w-full flex justify-center flex-col items-start ">
+        <div className="max-w[50%] mx-auto space-y-3">
+          <h4 className="font-bold text-2xl">
+            {" "}
+            Ready to Transform your Content Journey ?{" "}
+          </h4>
+          <p className="text-sm text-gray-400">
+            {" "}
+            Join thousands of content creators like you who chose Next-CMS{" "}
+          </p>
+          <div className="flex gap-2">
+            <input
+              className="bg-zinc-800 focus:outline-none rounded px-2 text-sm text-gray-300 py-[7px]"
+              type="text"
+              placeholder="Enter your email"
+            />
+            <Button variant="outline"> Submit</Button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
