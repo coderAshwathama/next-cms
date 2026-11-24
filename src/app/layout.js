@@ -1,6 +1,10 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/ui/app-sidebar";
 
 const geistSans = localFont({
@@ -27,10 +31,10 @@ export default function RootLayout({ children }) {
       >
         <SidebarProvider>
           <AppSidebar />
-          <main>
+          <SidebarInset>
             <SidebarTrigger />
             {children}
-          </main>
+          </SidebarInset>
         </SidebarProvider>
       </body>
     </html>
