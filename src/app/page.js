@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Pencil } from "lucide-react";
 
 export default function Landing() {
   return (
@@ -22,7 +23,20 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <section></section>
+      <section className="min-h-screen  sm:min-h-[80vh] w-full bg-gray-600/10">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
+          <span className="">
+            <Pencil size={50} />
+            <h3>Intuitive Editor</h3>
+            <p> Create and edit content with user friendly interface</p>
+          </span>
+          <span className="">
+            <Pencil size={50} />
+            <h3>Intuitive Editor</h3>
+            <p> Create and edit content with user friendly interface</p>
+          </span>
+        </div>
+      </section>
       <section></section>
       <section></section>
     </main>
