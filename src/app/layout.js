@@ -11,6 +11,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/ui/app-sidebar";
+import Navbar from "@/components/ui/navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           <AppSidebar />
           <SidebarInset>
             <SidebarTrigger />
+            <Navbar />
             {children}
           </SidebarInset>
         </SidebarProvider>
