@@ -51,7 +51,7 @@ const BlogCard = ({ title, excerpt, image, url }) => {
       <p className="text-sm text-gray-400 ">{excerpt}</p>
       <Link
         className="bg-zinc-600/70 py-2 px-3 rounded w-fit  text-xs "
-        href={url}
+        href={`/blog${url}`}
       >
         {" "}
         Read More
