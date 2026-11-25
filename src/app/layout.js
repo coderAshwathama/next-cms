@@ -12,6 +12,7 @@ import {
 import { AppSidebar } from "@/components/ui/app-sidebar";
 import Navbar from "@/components/ui/navbar";
 import AuthProvider from "@/components/providers/AuthProvider";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
   title: "Create Next App",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
               <SidebarTrigger />
               <Navbar />
               {children}
+              <Toaster />
             </SidebarInset>
           </SidebarProvider>
         </AuthProvider>

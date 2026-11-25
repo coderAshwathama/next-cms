@@ -1,10 +1,27 @@
 "use client";
 import { Icons } from "@/components/ui/icons";
+import { useToast } from "@/hooks/use-toast";
 import { Crown } from "lucide-react";
+import { signIn } from "next-auth/react";
+import { useState } from "react";
 
 export default function SignIn() {
-  const onSignIn = () => {
-    console.log("trying to sign in");
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+  const onSignIn = async () => {
+    try {
+      setLoading(true);
+      await signIn("google");
+    } catch (error) {
+      console.error(error.message);
+      toast({
+        variant: "destructive",
+        title: "Uh oh !",
+        description: "Failed to sign in",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <div className="w-full flex h-screen justify-center items-center">
@@ -19,7 +36,7 @@ export default function SignIn() {
           onClick={onSignIn}
         >
           <Icons.GoogleLogo className="size-7" />
-          Sign In
+          {loading ? "Loading...." : "Sign In"}
         </button>
       </div>
     </div>
