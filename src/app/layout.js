@@ -1,4 +1,3 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 const poppins = Poppins({
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/ui/app-sidebar";
 import Navbar from "@/components/ui/navbar";
+import AuthProvider from "@/components/providers/AuthProvider";
 
 export const metadata = {
   title: "Create Next App",
@@ -22,14 +22,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className={`${poppins.className} antialiased`}>
-        <SidebarProvider>
-          <AppSidebar />
-          <SidebarInset>
-            <SidebarTrigger />
-            <Navbar />
-            {children}
-          </SidebarInset>
-        </SidebarProvider>
+        <AuthProvider>
+          <SidebarProvider>
+            <AppSidebar />
+            <SidebarInset>
+              <SidebarTrigger />
+              <Navbar />
+              {children}
+            </SidebarInset>
+          </SidebarProvider>
+        </AuthProvider>
       </body>
     </html>
   );
