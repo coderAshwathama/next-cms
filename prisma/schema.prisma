@@ -76,20 +76,20 @@ model VerificationRequest {
 }
 
 // Optional for WebAuthn support
-model Authenticator {
-  credentialID         String  @id @map("_id")
-  userId               String  @db.ObjectId
-  providerAccountId    String
-  credentialPublicKey  String
-  counter              Int
-  credentialDeviceType String
-  credentialBackedUp   Boolean
-  transports           String?
+// model Authenticator {
+//   credentialID         String  @id @map("_id")
+//   userId               String  @db.ObjectId
+//   providerAccountId    String
+//   credentialPublicKey  String
+//   counter              Int
+//   credentialDeviceType String
+//   credentialBackedUp   Boolean
+//   transports           String?
 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+//   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@unique([userId, credentialID])
-}
+//   @@unique([userId, credentialID])
+// }
 
 model Post {
   id         String     @id @default(auto()) @map("_id") @db.ObjectId
